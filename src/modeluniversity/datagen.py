@@ -1,4 +1,4 @@
-from time import sleep
+    from time import sleep
 from litellm import completion
 from litellm import RateLimitError
 from termcolor import colored
@@ -119,7 +119,7 @@ def generate_questions(
             else "multi-answer test questions"
         )
 
-        main_part = f"""Create {settings.practice.num_total} {purpose_part} for the topic: {topic['topic']}. Subtopic: {subtopic}."""
+        main_part = f"""Create {settings_subset.num_total} {purpose_part} for the topic: {topic['topic']}. Subtopic: {subtopic}."""
         amounts_per_difficulty_part = f"{settings_subset.num_easy} easy, {settings_subset.num_medium} medium, {settings_subset.num_hard} hard questions."
 
         additional_questions_prompt = (
